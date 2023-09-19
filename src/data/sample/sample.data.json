@@ -1,0 +1,206 @@
+{
+    "packagePath": {
+        "chara_SAMPLE": "package/chara_SAMPLE.zip",
+        "place_SAMPLE": "package/place_SAMPLE.zip",
+        "BGM_SAMPLE": "package/BGM_SAMPLE.zip",
+        "voice_SAMPLE": "package/voice_SAMPLE.zip",
+        "home_SAMPLE": "package/home_SAMPLE.zip",
+        "CG_SAMPLE": "package/CG_SAMPLE.zip"
+    },
+    "file": {
+        "_P_INDOOR_5": [
+            "place_SAMPLE",
+            "bg_3571.png"
+        ],
+        "_P_INDOOR_4": [
+            "place_SAMPLE",
+            "bg_3573.png"
+        ],
+        "_P_INDOOR_4copy": [
+            "place_SAMPLE",
+            "bg_3573.png"
+        ],
+        "_C_12_01": [
+            "chara_SAMPLE",
+            "tati_120101.png"
+        ],
+        "_BGM_01": [
+            "BGM_SAMPLE",
+            "bgm_0208_loop.ogg"
+        ],
+        "_H_BG_0": [
+            "home_SAMPLE",
+            "bg_0.png"
+        ],
+        "_H_BG_1": [
+            "home_SAMPLE",
+            "bg_1.png"
+        ],
+        "_BGM_02": [
+            "BGM_SAMPLE",
+            "bgm_0206_loop.ogg"
+        ],
+        "CG_01": [
+            "CG_SAMPLE",
+            "eve_011401.png"
+        ],
+        "CG_02": [
+            "CG_SAMPLE",
+            "eve_011402.png"
+        ],
+        "_H_LOGO": [
+            "home_SAMPLE",
+            "霂LOGO.png"
+        ],
+        "_H_TITLE": [
+            "home_SAMPLE",
+            "_h_title.png"
+        ]
+    },
+    "chara": {
+        "12": [
+            "梅尔斯",
+            {
+                "01": "_C_12_01"
+            }
+        ]
+    },
+    "tipsGroup": {
+        "desk": [
+            "desk组名称",
+            [
+                "这是什么？",
+                "这是desk"
+            ],
+            [
+                "desk什么？",
+                "测试desk"
+            ]
+        ],
+        "test": [
+            "test组名称",
+            [
+                "这是什么？",
+                "这是test"
+            ],
+            [
+                "测试test什么？",
+                "测试test"
+            ]
+        ]
+    },
+    "book": {
+        "书「一」": [
+            "=BOOK:书「一」\n>start=\"道可道\"\n>defaultStyle=\"style-00\"\n>end=[[\"非常道\",\"GG\"],[\"名可名\",\"GG\"]]\n>cover=\"_H_BG_1\"\n>check=[\"!\",[\"!\",[],[]],[\"!\",[],[]]]\n",
+            {
+                "名可名": "=STORY:名可名\n>title=\"二 · 一 名可名\"\n>end=[\"0\"]\n>tips=[\"test\"]\n\u00020\n@12\u001e名可名...\u001echara[\"12\",\"01\",\"b_3\"]\u001esetPlace[\"_P_INDOOR_4\"]\u001eBGM[\"_BGM_02\"]\n\u00030",
+                "道可道": "=STORY:道可道\n>title=\"一 · 一 道可道\"\n>end=[\"1\",\"2\"]\n>tips=[\"test\"]\n>to=\"非常道\"\n\u00020aa\n@\u001e背景、音乐和人物的进入。\u001echara[\"12\",\"01\",\"a_2\"]\u001esetPlace[\"_P_INDOOR_5\"]\u001eBGM[\"_BGM_01\"]\n@\u001e背景、音乐和人物的切换。\u001esetPlace[\"_P_INDOOR_4\"]\u001eBGM[\"_BGM_02\"]\u001echara[\"12\",\"01\",\"a_1\"]\n@12\u001e人物动作。\u001echaraMove[\"default\",\"12\"]\n@\u001eCG进入。\u001eCG[\"CG_01\"]\n@\u001eCG切换。\u001eCG[\"CG_02\"]\n@\u001eCG、背景、音乐和人物的退出。\u001echaraOut[\"default\",\"12\"]\u001esetPlace[null]\u001eCGOut[]\u001eBGM[]\n@\u001e分支选项\u001echoice[[\"后半句\",\"1\",\"非常道\"],[\"下一句\",\"2\",\"名可名\"]]\n\u00030aa\n\u00021\n@\u001e选择了后半句\n\u00031\n\u00022\n@\u001e选择了下一句\n\u00032",
+                "非常道": "=STORY:非常道\n>title=\"一 · 二 非常道\"\n>end=[\"0\"]\n>tips=[\"test\"]\n\u00020\n@12\u001e非常道。\u001echara[\"12\",\"01\",\"b_2\"]\u001esetPlace[\"_P_INDOOR_5\"]\u001eBGM[\"_BGM_01\"]\n\u00030"
+            }
+        ],
+        "书「二」": [
+            "=BOOK:书「二」\n>start=\"非常名\"\n>defaultStyle=\"style-00\"\n>end=[[\"非常名\",\"2GG\"]]\n>cover=\"_H_BG_0\"\n>check=[\"&\",[\"!\",[],[]],[\"&\",[\"书「一」/道可道\"],[]]]\n",
+            {
+                "非常名": "=STORY:非常名\n>title=\"二 · 二 非常名\"\n>end=[\"0\"]\n>tips=[\"test\"]\n\u00020\n@12\u001e非常名。\u001esetPlace[\"_P_INDOOR_4\"]\n@\u001e将解锁：档案2，新的背景图片。\u001echaraOut[\"default\",\"12\"]\u001esetPlace[null]\n\u00030"
+            }
+        ]
+    },
+    "information": {
+        "info_0": {
+            "title": "档案0：一开始就能阅读",
+            "order": "0",
+            "check": [
+                [],
+                []
+            ],
+            "data": [
+                [
+                    "text",
+                    "一开始就能阅读的内容。"
+                ]
+            ]
+        },
+        "info_1": {
+            "title": "档案1：道",
+            "check": [
+                [],
+                [
+                    "&",
+                    [
+                        "书「一」/非常道"
+                    ],
+                    []
+                ]
+            ],
+            "order": "100",
+            "data": [
+                [
+                    "pic",
+                    "_H_BG_0"
+                ],
+                [
+                    "text",
+                    "有一个段落。"
+                ],
+                [
+                    "text",
+                    "还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。"
+                ]
+            ]
+        },
+        "info_2": {
+            "title": "档案2：名",
+            "check": [
+                [],
+                [
+                    "&",
+                    [
+                        "书「二」/非常名"
+                    ],
+                    []
+                ]
+            ],
+            "order": "200",
+            "data": [
+                [
+                    "pic",
+                    "_H_BG_1"
+                ],
+                [
+                    "text",
+                    "有一个段落。"
+                ],
+                [
+                    "text",
+                    "还有一个段落。"
+                ]
+            ]
+        }
+    },
+    "homeResource": {
+        "BGM": "_H_BGM_0",
+        "backgroundImageList": [
+            [
+                [
+                    [],
+                    []
+                ],
+                "_H_BG_0"
+            ],
+            [
+                [
+                    [],
+                    [
+                        "书「一」/道可道"
+                    ]
+                ],
+                "_H_BG_1"
+            ]
+        ],
+        "backgroundImage": "_H_BG_0",
+        "elements": {
+            "title": "_H_TITLE",
+            "logo": "_H_LOGO"
+        }
+    }
+}

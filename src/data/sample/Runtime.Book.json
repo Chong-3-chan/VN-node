@@ -1,0 +1,380 @@
+{
+    "书「一」": {
+        "start": "道可道",
+        "name": "书「一」",
+        "end": {
+            "非常道": "GG",
+            "名可名": "GG"
+        },
+        "cover": "_H_BG_1",
+        "default_style": "style-00",
+        "data": {
+            "名可名": {
+                "id": "名可名",
+                "title": "二 · 一 名可名",
+                "start": "0000000",
+                "end": [
+                    "0000000"
+                ],
+                "preload": [
+                    {
+                        "name": "chara_pic",
+                        "data": [
+                            "_C_12_01"
+                        ]
+                    },
+                    {
+                        "name": "place",
+                        "data": [
+                            "_P_INDOOR_4"
+                        ]
+                    },
+                    {
+                        "name": "BGM",
+                        "data": [
+                            "_BGM_02"
+                        ]
+                    }
+                ],
+                "tips": [
+                    "test"
+                ],
+                "to": {
+                    "default": null,
+                    "able": []
+                },
+                "data": {
+                    "0000000": {
+                        "id": "0000000",
+                        "place": "_P_INDOOR_4",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "b_3",
+                                "in": "default"
+                            }
+                        },
+                        "charaName": "梅尔斯",
+                        "text": "名可名...",
+                        "BGM": "_BGM_02"
+                    }
+                }
+            },
+            "道可道": {
+                "id": "道可道",
+                "title": "一 · 一 道可道",
+                "start": "0010000",
+                "end": [
+                    "0020000",
+                    "0030000"
+                ],
+                "preload": [
+                    {
+                        "name": "chara_pic",
+                        "data": [
+                            "_C_12_01"
+                        ]
+                    },
+                    {
+                        "name": "CG",
+                        "data": [
+                            "CG_01",
+                            "CG_02"
+                        ]
+                    },
+                    {
+                        "name": "place",
+                        "data": [
+                            "_P_INDOOR_5",
+                            "_P_INDOOR_4"
+                        ]
+                    },
+                    {
+                        "name": "BGM",
+                        "data": [
+                            "_BGM_01",
+                            "_BGM_02"
+                        ]
+                    }
+                ],
+                "tips": [
+                    "test"
+                ],
+                "to": {
+                    "default": "非常道",
+                    "able": [
+                        "非常道",
+                        "名可名"
+                    ]
+                },
+                "data": {
+                    "0010000": {
+                        "id": "0010000",
+                        "place": "_P_INDOOR_5",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_2",
+                                "in": "default"
+                            }
+                        },
+                        "charaName": "",
+                        "text": "背景、音乐和人物的进入。",
+                        "BGM": "_BGM_01"
+                    },
+                    "0010001": {
+                        "id": "0010001",
+                        "place": "_P_INDOOR_4",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_1",
+                                "in": "default",
+                                "out": "default"
+                            }
+                        },
+                        "BGM": "_BGM_02",
+                        "charaName": "",
+                        "text": "背景、音乐和人物的切换。"
+                    },
+                    "0010002": {
+                        "id": "0010002",
+                        "place": "_P_INDOOR_4",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_1",
+                                "move": "default"
+                            }
+                        },
+                        "BGM": "_BGM_02",
+                        "charaName": "梅尔斯",
+                        "text": "人物动作。"
+                    },
+                    "0010003": {
+                        "id": "0010003",
+                        "place": "_P_INDOOR_4",
+                        "CG": "CG_01",
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_1"
+                            }
+                        },
+                        "BGM": "_BGM_02",
+                        "charaName": "",
+                        "text": "CG进入。"
+                    },
+                    "0010004": {
+                        "id": "0010004",
+                        "place": "_P_INDOOR_4",
+                        "CG": "CG_02",
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_1"
+                            }
+                        },
+                        "BGM": "_BGM_02",
+                        "charaName": "",
+                        "text": "CG切换。"
+                    },
+                    "0010005": {
+                        "id": "0010005",
+                        "place": null,
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "a_1",
+                                "out": "default"
+                            }
+                        },
+                        "charaName": "",
+                        "text": "CG、背景、音乐和人物的退出。"
+                    },
+                    "0010006": {
+                        "id": "0010006",
+                        "place": null,
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {},
+                        "charaName": "",
+                        "text": "分支选项",
+                        "options": [
+                            {
+                                "text": "后半句",
+                                "jump": "0020000",
+                                "to": "非常道"
+                            },
+                            {
+                                "text": "下一句",
+                                "jump": "0030000",
+                                "to": "名可名"
+                            }
+                        ]
+                    },
+                    "0020000": {
+                        "id": "0020000",
+                        "place": null,
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {},
+                        "charaName": "",
+                        "text": "选择了后半句"
+                    },
+                    "0030000": {
+                        "id": "0030000",
+                        "place": null,
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {},
+                        "charaName": "",
+                        "text": "选择了下一句"
+                    }
+                }
+            },
+            "非常道": {
+                "id": "非常道",
+                "title": "一 · 二 非常道",
+                "start": "0040000",
+                "end": [
+                    "0040000"
+                ],
+                "preload": [
+                    {
+                        "name": "chara_pic",
+                        "data": [
+                            "_C_12_01"
+                        ]
+                    },
+                    {
+                        "name": "place",
+                        "data": [
+                            "_P_INDOOR_5"
+                        ]
+                    },
+                    {
+                        "name": "BGM",
+                        "data": [
+                            "_BGM_01"
+                        ]
+                    }
+                ],
+                "tips": [
+                    "test"
+                ],
+                "to": {
+                    "default": null,
+                    "able": []
+                },
+                "data": {
+                    "0040000": {
+                        "id": "0040000",
+                        "place": "_P_INDOOR_5",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": true,
+                        "charas": {
+                            "12": {
+                                "style": "01",
+                                "position": "b_2",
+                                "in": "default"
+                            }
+                        },
+                        "charaName": "梅尔斯",
+                        "text": "非常道。",
+                        "BGM": "_BGM_01"
+                    }
+                }
+            }
+        },
+        "check": {
+            "read": [],
+            "ended": []
+        }
+    },
+    "书「二」": {
+        "start": "非常名",
+        "name": "书「二」",
+        "end": {
+            "非常名": "2GG"
+        },
+        "cover": "_H_BG_0",
+        "default_style": "style-00",
+        "data": {
+            "非常名": {
+                "id": "非常名",
+                "title": "二 · 二 非常名",
+                "start": "0050000",
+                "end": [
+                    "0050001"
+                ],
+                "preload": [
+                    {
+                        "name": "place",
+                        "data": [
+                            "_P_INDOOR_4"
+                        ]
+                    }
+                ],
+                "tips": [
+                    "test"
+                ],
+                "to": {
+                    "default": null,
+                    "able": []
+                },
+                "data": {
+                    "0050000": {
+                        "id": "0050000",
+                        "place": "_P_INDOOR_4",
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {},
+                        "charaName": "梅尔斯",
+                        "text": "非常名。"
+                    },
+                    "0050001": {
+                        "id": "0050001",
+                        "place": null,
+                        "CG": null,
+                        "CG_transform": null,
+                        "charas_change": false,
+                        "charas": {},
+                        "charaName": "",
+                        "text": "将解锁：档案2，新的背景图片。"
+                    }
+                }
+            }
+        },
+        "check": {
+            "read": [],
+            "ended": [
+                "书「一」/道可道"
+            ]
+        }
+    }
+}

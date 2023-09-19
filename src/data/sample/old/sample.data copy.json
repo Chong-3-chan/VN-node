@@ -1,0 +1,204 @@
+{
+    "package_map": {
+        "chara_SAMPLE": "package/chara_SAMPLE.zip",
+        "place_SAMPLE": "package/place_SAMPLE.zip",
+        "BGM_SAMPLE": "package/BGM_SAMPLE.zip",
+        "voice_SAMPLE": "package/voice_SAMPLE.zip",
+        "home_SAMPLE": "package/home_SAMPLE.zip",
+        "CG_SAMPLE": "package/CG_SAMPLE.zip"
+    },
+    "file_map": {
+        "_P_INDOOR_5": {
+            "packageKey": "place_SAMPLE",
+            "fileName": "bg_3571.png"
+        },
+        "_P_INDOOR_4": {
+            "packageKey": "place_SAMPLE",
+            "fileName": "bg_3573.png"
+        },
+        "_C_12_01": {
+            "packageKey": "chara_SAMPLE",
+            "fileName": "tati_120101.png"
+        },
+        "_BGM_01": {
+            "packageKey": "BGM_SAMPLE",
+            "fileName": "bgm_0208_loop.ogg"
+        },
+        "_H_BG_0": {
+            "packageKey": "home_SAMPLE",
+            "fileName": "bg_0.png"
+        },
+        "_H_BG_1": {
+            "packageKey": "home_SAMPLE",
+            "fileName": "bg_1.png"
+        },
+        "_BGM_02": {
+            "packageKey": "BGM_SAMPLE",
+            "fileName": "bgm_0206_loop.ogg"
+        },
+        "CG_01": {
+            "packageKey": "CG_SAMPLE",
+            "fileName": "eve_011401.png"
+        },
+        "CG_02": {
+            "packageKey": "CG_SAMPLE",
+            "fileName": "eve_011402.png"
+        },
+        "_H_LOGO": {
+            "packageKey": "home_SAMPLE",
+            "fileName": "霂LOGO.png"
+        },
+        "_H_TITLE": {
+            "packageKey": "home_SAMPLE",
+            "fileName": "_h_title.png"
+        }
+    },
+    "chara_map": {
+        "12": {
+            "id": "12",
+            "name": "梅尔斯",
+            "pic": {
+                "01": "_C_12_01"
+            }
+        }
+    },
+    "tips_group": {
+        "desk": [
+            {
+                "title": "这是什么？",
+                "text": "这是desk"
+            },
+            {
+                "title": "desk什么？",
+                "text": "测试desk"
+            }
+        ],
+        "test": [
+            {
+                "title": "这是什么？",
+                "text": "这是test"
+            },
+            {
+                "title": "测试test什么？",
+                "text": "测试test"
+            }
+        ]
+    },
+    "b": {
+        "书「一」": "=BOOK:书「一」\n>start=道可道\n>default_style=style-00\n>end=[非常道,GG],[名可名,GG]\n>cover=_H_BG_1\n>check=[],[]\n",
+        "书「二」": "=BOOK:书「二」\n>start=非常名\n>default_style=style-00\n>end=[非常名,2GG]\n>cover=_H_BG_0\n>check=[],[书「一」/道可道]\n"
+    },
+    "bookIds": [
+        "书「一」",
+        "书「二」"
+    ],
+    "s": {
+        "书「一」": {
+            "名可名": "=STORY:名可名\n>title=二 · 一 名可名\n>end=0\n>tips=test\n~0:\n@12##名可名...##chara[12,01,b_3]##setPlace[_P_INDOOR_4]##BGM[_BGM_02]\n~0 end",
+            "道可道": "=STORY:道可道\n>title=一 · 一 道可道\n>end=1,2\n>tips=test\n>to=非常道\n~0:\n@##背景、音乐和人物的进入。##chara[12,01,a_2]##setPlace[_P_INDOOR_5]##BGM[_BGM_01]\n@##背景、音乐和人物的切换。##setPlace[_P_INDOOR_4]##BGM[_BGM_02]##chara[12,01,a_1]\n@12##人物动作。##charaMove[default,12]\n@##CG进入。##CG[CG_01]\n@##CG切换。##CG[CG_02]\n@##CG、背景、音乐和人物的退出。##charaOut[default,12]##setPlace[null]##CGOut[]##BGM[]\n@##分支选项##choice[[后半句,1,非常道],[下一句,2,名可名]]\n~0 end\n~1:\n@##选择了后半句\n~1 end\n~2:\n@##选择了下一句\n~2 end",
+            "非常道": "=STORY:非常道\n>title=一 · 二 非常道\n>end=0\n>tips=test\n~0:\n@12##非常道。##chara[12,01,b_2]##setPlace[_P_INDOOR_5]##BGM[_BGM_01]\n~0 end"
+        },
+        "书「二」": {
+            "非常名": "=STORY:非常名\n>title=二 · 二 非常名\n>end=0\n>tips=test\n~0:\n@12##非常名。##setPlace[_P_INDOOR_4]\n@##将解锁：档案2，新的背景图片。##charaOut[default,12]##setPlace[null]\n~0 end"
+        }
+    },
+    "information_map": {
+        "info_1": {
+            "id": "info_1",
+            "title": "档案1：道",
+            "check": {
+                "read": [],
+                "ended": [
+                    "书「一」/非常道"
+                ]
+            },
+            "order": "100",
+            "data": [
+                {
+                    "type": "pic",
+                    "fileKey": "_H_BG_0"
+                },
+                {
+                    "type": "text",
+                    "text": "有一个段落。"
+                },
+                {
+                    "type": "text",
+                    "text": "还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。还有一个段落。\n还有一个段落。"
+                }
+            ]
+        },
+        "info_2": {
+            "id": "info_2",
+            "title": "档案2：名",
+            "check": {
+                "read": [],
+                "ended": [
+                    "书「二」/非常名"
+                ]
+            },
+            "order": "200",
+            "data": [
+                {
+                    "type": "pic",
+                    "fileKey": "_H_BG_1"
+                },
+                {
+                    "type": "text",
+                    "text": "有一个段落。"
+                },
+                {
+                    "type": "text",
+                    "text": "还有一个段落。"
+                }
+            ]
+        },
+        "info_0": {
+            "id": "info_0",
+            "title": "档案0：一开始就能阅读",
+            "order": "0",
+            "check": {
+                "read": [],
+                "ended": []
+            },
+            "data": [
+                {
+                    "type": "text",
+                    "text": "一开始就能阅读的内容。"
+                }
+            ]
+        }
+    },
+    "homeResource_map": {
+        "BGM": "_H_BGM_0",
+        "backgroundImageList": [
+            {
+                "check": {
+                    "read": [],
+                    "ended": []
+                },
+                "fileKey": "_H_BG_0"
+            },
+            {
+                "check": {
+                    "read": [],
+                    "ended": [
+                        "书「一」/道可道"
+                    ]
+                },
+                "fileKey": "_H_BG_1"
+            }
+        ],
+        "backgroundImage": "_H_BG_0",
+        "booksCover": {},
+        "elements": {
+            "title": {
+                "text": "我不到啊",
+                "fileKey": "_H_TITLE"
+            },
+            "logo": {
+                "fileKey": "_H_LOGO"
+            }
+        }
+    }
+}
